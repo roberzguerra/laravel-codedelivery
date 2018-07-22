@@ -140,6 +140,10 @@ return [
         // Service provider para utilizar o RepositoryService
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
 
+        // Service Provider para o Scafold (adiciona algumas views padroes)
+        Bestmomo\Scafold\ScafoldServiceProvider::class,
+
+
         /*
          * Application Service Providers...
          */
@@ -147,6 +151,9 @@ return [
         CodeDelivery\Providers\AuthServiceProvider::class,
         CodeDelivery\Providers\EventServiceProvider::class,
         CodeDelivery\Providers\RouteServiceProvider::class,
+
+        // Provider para carregoar o Repository Provider
+        CodeDelivery\Providers\RepositoryServiceProvider::class,
 
     ],
 

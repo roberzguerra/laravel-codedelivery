@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+// Exemplo de uso do Repository
+Route::get('/test', function () {
+
+    // Instancia diretamente o repository:
+    $repository = app()->make('CodeDelivery\Repositories\CategoryRepository');
+    return $repository->all();
+
+
+
+});
