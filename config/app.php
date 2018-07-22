@@ -137,6 +137,9 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+        // Service provider para utilizar o RepositoryService
+        Prettus\Repository\Providers\RepositoryServiceProvider::class,
+
         /*
          * Application Service Providers...
          */
