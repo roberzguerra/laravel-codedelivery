@@ -16,8 +16,9 @@ Route::get('/', function () {
 });
 
 
-Route::get('/admin/categories', 'CategoriesController@index');
+Route::get('/admin/categories', [ 'uses' => 'CategoriesController@index', 'as' => 'admin.categories.index'] );
 Route::get('/admin/categories/create', [ 'uses' => 'CategoriesController@create', 'as' => 'admin.categories.create'] );
+Route::post('/admin/categories/store', [ 'uses' => 'CategoriesController@store', 'as' => 'admin.categories.store'] );
 
 
 // Exemplo de uso do Repository
