@@ -2,8 +2,8 @@
 
 namespace CodeDelivery\Http\Controllers;
 
+use CodeDelivery\Http\Requests\AdminCategoryRequest;
 use CodeDelivery\Repositories\CategoryRepository;
-use Illuminate\Http\Request;
 
 class CategoriesController extends Controller
 {
@@ -29,7 +29,7 @@ class CategoriesController extends Controller
     }
 
 
-    public function store(Request $request)
+    public function store(AdminCategoryRequest $request)
     {
 
         $data = $request->all();
