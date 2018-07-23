@@ -29,7 +29,7 @@ Route::get('/admin/products/create', [ 'uses' => 'ProductsController@create', 'a
 Route::get('/admin/products/edit/{id}', [ 'uses' => 'ProductsController@edit', 'as' => 'admin.products.edit'] );
 Route::post('/admin/products/store', [ 'uses' => 'ProductsController@store', 'as' => 'admin.products.store'] );
 Route::post('/admin/products/update/{id}', [ 'uses' => 'ProductsController@update', 'as' => 'admin.products.update'] );
-
+Route::get('/admin/products/destroy/{id}', [ 'uses' => 'ProductsController@destroy', 'as' => 'admin.products.destroy'] );
 
 
 // Exemplo de uso do Repository

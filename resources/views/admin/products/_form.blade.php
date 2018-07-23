@@ -10,7 +10,7 @@
 
 <div class="form-group">
     {!! Form::label('description', 'Descrição') !!}
-    {!! Form::textarea('description', $product->description , ['class' => 'form-control']) !!}
+    {!! Form::textarea('description', null , ['class' => 'form-control']) !!}
 </div>
 
 <div class="form-group">
