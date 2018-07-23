@@ -15,12 +15,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+// Rotas Categories
 Route::get('/admin/categories', [ 'uses' => 'CategoriesController@index', 'as' => 'admin.categories.index'] );
 Route::get('/admin/categories/create', [ 'uses' => 'CategoriesController@create', 'as' => 'admin.categories.create'] );
 Route::get('/admin/categories/edit/{id}', [ 'uses' => 'CategoriesController@edit', 'as' => 'admin.categories.edit'] );
 Route::post('/admin/categories/store', [ 'uses' => 'CategoriesController@store', 'as' => 'admin.categories.store'] );
 Route::post('/admin/categories/update/{id}', [ 'uses' => 'CategoriesController@update', 'as' => 'admin.categories.update'] );
+
+
+// Rotas Products
+Route::get('/admin/products', [ 'uses' => 'ProductsController@index', 'as' => 'admin.products.index'] );
+Route::get('/admin/products/create', [ 'uses' => 'ProductsController@create', 'as' => 'admin.products.create'] );
+Route::get('/admin/products/edit/{id}', [ 'uses' => 'ProductsController@edit', 'as' => 'admin.products.edit'] );
+Route::post('/admin/products/store', [ 'uses' => 'ProductsController@store', 'as' => 'admin.products.store'] );
+Route::post('/admin/products/update/{id}', [ 'uses' => 'ProductsController@update', 'as' => 'admin.products.update'] );
+
 
 
 // Exemplo de uso do Repository
